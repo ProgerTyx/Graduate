@@ -1,0 +1,32 @@
+.price-list {
+  .collection.with-header {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: initial;
+
+    .collection-header {
+      background-color: #8c68bb;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+
+    .collection-item {
+      cursor: default;
+      transition: all 0.5s ease-in;
+      padding-left: 20px;
+    }
+
+    .collection-item:hover {
+      transform: translate(-10%, 20%);
+      background-color: rgb(230, 230, 230);
+    }
+
+    .price {
+      .icon {
+        vertical-align: middle;
+      }
+    }
+  }
+}

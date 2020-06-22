@@ -1,32 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import NoUiSlider from "../NoUiSlider/NoUiSlider";
-import Category from "./Category";
+import Search from "../Search";
+import Categories from "./Categories";
 
-const Filter = () => {
-  const [categories] = useState([
-    {
-      name: "Категории",
-      data: ["Декорирование", "Питание", "Дополнительно"],
-    },
-  ]);
-
-  const categoriesItems = categories.map((item, idx) => {
-    return <Category key={idx} data={item} />;
-  });
-
+const Filter = ({ price, categories }) => {
   return (
     <div className="filter">
       <div className="row filter__item">
         <div className="col s10 offset-s1">
-          <div className="input-field">
-            <i className="material-icons prefix">search</i>
-            <input
-              id="search"
-              type="text"
-              className="validate"
-              placeholder="Поиск"
-            />
-          </div>
+          <Search />
         </div>
       </div>
 
@@ -34,19 +16,27 @@ const Filter = () => {
 
       <div className="row filter__item">
         <div className="col s10 offset-s1">
-          <NoUiSlider
-            start={[0, 500]}
-            step={1}
-            range={{ min: 0, max: 500 }}
-            connect
-          />
+          {price && (
+            <NoUiSlider
+              price={price}
+              start={[price.min, price.max]}
+              step={1}
+              range={{ min: price.min, max: price.max }}
+              connect
+            />
+          )}
         </div>
       </div>
 
       <div className="divider"></div>
 
       <div className="row filter__item">
-        <div className="col s10 offset-s1">{categoriesItems}</div>
+        <div className="col s10 offset-s1">
+          <div className="category">
+            <span className="category__title">Категории</span>
+            <Categories categories={categories} />
+          </div>
+        </div>
       </div>
     </div>
   );

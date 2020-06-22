@@ -1,7 +1,12 @@
 import React from "react";
+import PriceList from "../../Components/PriceList";
 
 const AdminPage = () => {
-  return <h1>Admin Page</h1>;
+  return (
+    <div className="container">
+      <PriceList />
+    </div>
+  );
 };
 
 export default AdminPage;

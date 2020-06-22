@@ -7,7 +7,6 @@ import { AuthContext } from "./context/AuthContext";
 import "materialize-css";
 
 function App() {
-  console.log("App");
   const { token, login, userId, ready } = useAuth();
   const isAuth = !!token;
   const routes = userRoutes(isAuth);

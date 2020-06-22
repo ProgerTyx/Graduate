@@ -31,7 +31,7 @@ const Header = () => {
                     active: showBasket,
                   })}
                 >
-                  <a href="!#" onClick={() => setShowBasket(!showBasket)}>
+                  <a onClick={() => setShowBasket(!showBasket)}>
                     <i className="material-icons">shopping_cart</i>
                   </a>
                 </li>
@@ -41,7 +41,7 @@ const Header = () => {
                     hidden: showBasket,
                   })}
                 >
-                  <a href="!#" onClick={() => setShowNav(!showNav)}>
+                  <a onClick={() => setShowNav(!showNav)}>
                     <i className="material-icons">menu</i>
                   </a>
                 </li>

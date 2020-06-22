@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        <div className="container center-align">© 2014 Copyright Text</div>
+        <div className="container center-align">© 2020 Copyright Text</div>
       </div>
     </footer>
   );
